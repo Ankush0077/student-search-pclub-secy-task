@@ -34,7 +34,9 @@ background-image: url(assets/images/binary.jpg);
   <section style="width:80%; margin-left:10%;">
     <h2 style='text-align:center; color:#4CBB17;'>Baapu/Amma<h2>
         <hr>
-        {% for baapu in baapu %}
+        <div class="container text-center">
+          <div class="row g-2">
+        {% if baapu_present %}
         <div class="col-6">
           <div class="card mb-3" type="button" style="max-width: 540px; background-color:#4CBB17;" data-bs-toggle="modal" data-bs-target="#baapu{{forloop.counter}}">
               <div  class="row g-0">
@@ -74,8 +76,9 @@ background-image: url(assets/images/binary.jpg);
           </div>
         </div>
 
-        
-        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
   </section>
 
   <br>
@@ -83,6 +86,8 @@ background-image: url(assets/images/binary.jpg);
   <section style="width:80%; margin-left:10%;">
     <h2 style='text-align:center; color:#4CBB17;'>Bhai/Behen<h2>
         <hr>
+        <div class="container text-center">
+          <div class="row g-2">
         {% for bhai in bhai %}
         <div class="col-6">
           <div class="card mb-3" type="button" style="max-width: 540px; background-color:#4CBB17;" data-bs-toggle="modal" data-bs-target="#bhai{{forloop.counter}}">
@@ -125,6 +130,9 @@ background-image: url(assets/images/binary.jpg);
 
         
         {% endfor %}
+
+      </div>
+    </div>
   </section>
 
   <br>
@@ -132,6 +140,8 @@ background-image: url(assets/images/binary.jpg);
   <section style="width:80%; margin-left:10%;">
     <h2 style='text-align:center; color:#4CBB17;'>Bacche<h2>
         <hr>
+        <div class="container text-center">
+          <div class="row g-2">
         {% for bacha in bacha %}
         <div class="col-6">
           <div class="card mb-3" type="button" style="max-width: 540px; background-color:#4CBB17;" data-bs-toggle="modal" data-bs-target="#bacha{{forloop.counter}}">
@@ -174,6 +184,9 @@ background-image: url(assets/images/binary.jpg);
 
         
         {% endfor %}
+
+      </div>
+    </div>
   </section>
 </body>
 {% endblock %}

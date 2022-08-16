@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Student(models.Model):
-   imGE=models.ImageField(upload_to=True)
+   imGE=models.ImageField(upload_to=True,blank=True,null=True)
    name=models.CharField(max_length=100)
    userid=models.CharField(max_length=100)
    GENDER_CHOICES=(

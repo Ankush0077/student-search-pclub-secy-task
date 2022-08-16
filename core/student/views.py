@@ -936,16 +936,26 @@ def student_search(request):
     return render(request, "index.html", context)
 
 def family_tree(request, roll_no):
-    print(request.method)
-    print(request)
-    student=Student.objects.get(roll_no=roll_no)
-    baapu=student.student_guide
-    bhai=Student.objects.filter(student_guide=baapu).exclude(roll_no=roll_no)
+    student=Student.objects.filter(roll_no=roll_no)
+    print(student)
+    student=student.get(roll_no=roll_no)
+    try:
+        baapuRoll=student.student_guide.roll_no
+        print(baapuRoll)
+        baapu=Student.objects.get(roll_no=baapuRoll)
+        print(baapu)
+        bhai=Student.objects.filter(student_guide=baapu).exclude(roll_no=roll_no)
+        baapu_present=True
+    except:
+        baapu=None
+        bhai=[]
+        baapu_present=False
     bacha=Student.objects.filter(student_guide=student)
     context={
         'student': student,
         'baapu':baapu,
         'bhai': bhai,
         'bacha': bacha,
+        'baapu_present': baapu_present,
     }
     return render(request,"family_tree.html",context)
