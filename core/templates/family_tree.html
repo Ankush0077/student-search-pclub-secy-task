@@ -29,10 +29,10 @@ background-color: black;
 background-image: url(assets/images/binary.jpg);           
 ">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  <h1 style="text-align:center; color:#5F8575;"> IITK Family Tree Of {{student.name}}</h1>
+  <h1 style="text-align:center; color:#4CBB17;"> IITK Family Tree Of {{student.name}}</h1>
   <br>
   <section style="width:80%; margin-left:10%;">
-    <h2 style='text-align:center; color:#5F8575;'>Baapu/Amma<h2>
+    <h2 style='text-align:center; color:#4CBB17;'>Baapu/Amma<h2>
         <hr>
         {% for baapu in baapu %}
         <div class="col-6">
@@ -56,7 +56,8 @@ background-image: url(assets/images/binary.jpg);
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div style ='background-color:#5F8575; color:#FFFFFF; width:70%;' class="modal-content">
               <div class="modal-body">
-                <img class="modal-title" id="baapu{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <img style="width:50%" class="modal-title" id="baapu{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <hr>
                 <h5>{{baapu.name}}</h5>
                 <p>({{baapu.roll_no}})</p>
                 <p>{{baapu.programme}}, {{baapu.branch}}</p>
@@ -80,7 +81,7 @@ background-image: url(assets/images/binary.jpg);
   <br>
 
   <section style="width:80%; margin-left:10%;">
-    <h2 style='text-align:center; color:#5F8575;'>Bhai/Behen<h2>
+    <h2 style='text-align:center; color:#4CBB17;'>Bhai/Behen<h2>
         <hr>
         {% for bhai in bhai %}
         <div class="col-6">
@@ -104,7 +105,8 @@ background-image: url(assets/images/binary.jpg);
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div style ='background-color:#5F8575; color:#FFFFFF; width:70%;' class="modal-content">
               <div class="modal-body">
-                <img class="modal-title" id="bhai{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <img style="width:50%" class="modal-title" id="bhai{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <hr>
                 <h5>{{bhai.name}}</h5>
                 <p>({{bhai.roll_no}})</p>
                 <p>{{bhai.programme}}, {{bhai.branch}}</p>
@@ -128,7 +130,7 @@ background-image: url(assets/images/binary.jpg);
   <br>
 
   <section style="width:80%; margin-left:10%;">
-    <h2 style='text-align:center; color:#5F8575;'>Bacche<h2>
+    <h2 style='text-align:center; color:#4CBB17;'>Bacche<h2>
         <hr>
         {% for bacha in bacha %}
         <div class="col-6">
@@ -152,7 +154,8 @@ background-image: url(assets/images/binary.jpg);
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div style ='background-color:#5F8575; color:#FFFFFF; width:70%;' class="modal-content">
               <div class="modal-body">
-                <img class="modal-title" id="bacha{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <img style="width:50%" class="modal-title" id="bacha{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                <hr>
                 <h5>{{bacha.name}}</h5>
                 <p>({{bacha.roll_no}})</p>
                 <p>{{bacha.programme}}, {{baapu.branch}}</p>
