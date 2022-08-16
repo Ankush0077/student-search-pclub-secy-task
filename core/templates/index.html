@@ -1,0 +1,825 @@
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Search | IITK</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <meta name="apple-mobile-web-app-title" content="Student Search | IITK">
+    <meta name="application-name" content="Student Search | IITK">
+    <meta name="theme-color" content="#3f51b5">
+    <meta name="description" content="A Student Search for IITK junta">
+    <meta name="keywords" content="Student, Search, IITK">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <!-- Tells Google not to show the sitelinks search box -->
+    <meta name="google" content="nositelinkssearchbox">
+    <!-- Tells Google not to provide a translation for this document -->
+    <meta name="google" content="notranslate">
+</head>
+<body style="
+background-color: black;
+background-image: url(assets/images/binary.jpg);           
+">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <section style="
+  width:70%;
+  margin-left:15%;
+  background-color:#023020;
+  padding-left:3%;
+  padding-right:2%;
+  border-radius: 10%;
+  border: solid;
+  border-color: #222; 
+  ">
+    <br>
+    <form method='POST'>
+      {% csrf_token %}
+        <div class="row g-3">
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Year</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y22'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y22
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y21'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y21
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y20'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y20
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y19'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y19
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y18'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y18
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y17'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y17
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y16'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y16
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y15'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y15
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y14'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y14
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y13'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y13
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y12'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Y12
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y11'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Y11
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y10'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Y10
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y9'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Y9
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Y8'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Y8
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Other'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Other
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Gender</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Male'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Male
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Female'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Female
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Hall</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 1'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 1
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 2'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 2
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 3'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 3
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 4'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 4
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 5'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 5
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 6'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 6
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 7'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 7
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 8'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 8
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 9'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 9
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 10'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 10
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 11'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Hall 11
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 12'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Hall 12
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='HALL 13'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Hall 13
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='GH'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      GH
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='DAY'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      DAY
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='CPWD'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      CPWD
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='ACES'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      ACES
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='NRA'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      NRA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='RA'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      RA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='SBRA'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      SBRA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='TYPE 1'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      TYPE 1
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='TYPE 1B'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      TYPE 1B
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='UNKN'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      UNKN
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+          <br>
+          <div class="row g-3">
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Programme</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BS'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BS
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BS-MBA'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BS-MBA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BS-MS'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BS-MS
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BS-MT'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BS-MT
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BT-M.Des'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BT-M.Des
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BT-MBA'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BT-MBA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='BT-MS'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      BT-MS
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='B.Tech'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      B.Tech
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='DIIT'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      DIIT
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Exchange Programme'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Exchange Programme
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MBA'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      MBA
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='M.Des'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      M.Des
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MS-Research'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MS-Research
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MSc(2 yr)'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MSc(2 yr)
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MSc(Int)'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MSc(Int)
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MSc-PhD(Dual)'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MSc-PhD(Dual)
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MT(Dual)'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MT(Dual)
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='M.Tech'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      M.Tech
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='PGPEX-VLM'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      PGPEX-VLM
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='PhD'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      PhD
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Prep.'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Prep.
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='SURGE'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      SURGE
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='eMasters'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      eMasters
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Department</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Aerospace Engineering'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Aerospace Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Biological Sciences and Bioengineering'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Biological Sciences and Bioengineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Civil Engineering'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Civil Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Chemical Engineering'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Chemical Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Chemistry'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Chemistry
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Computer Science and Engineering'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Computer Science and Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Cognitive Sciences'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Cognitive Sciences
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Dean Of Academic Affairs'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Dean Of Academic Affairs
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Dean Of Resource Affairs'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Dean Of Resource Affairs
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Dean Of Research and Development'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Dean Of Research and Development
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Economic Sciences'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      Economic Sciences
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Electrical Engineering'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Electrical Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='EEM'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      EEM
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Earth Sciences'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Earth Sciences
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Humanities and Social Sciences'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Humanities and Social Sciences
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Industrial and Management Engineering'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Industrial and Management Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Laser Technology'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Laser Technology
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='MDes'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      MDes
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Mechanical Engineering'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Mechanical Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Material Science and Engineering'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Material Science and Engineering
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Mathematics and Statistics'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Mathematics and Statistics
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Mat. and Met.Engg.'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Mat. and Met.Engg.
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Materials Science Programme'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Materials Science Programme
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Mathematics And Scientific Comp'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Mathematics And Scientific Comp
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Nuc. Engg. and Tech Prog.'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Nuc. Engg. and Tech Prog.
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Null'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Null
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Physics'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Physics
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Photonics Science and Engg.'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Photonics Science and Engg.
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Statistics'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Statistics
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Statistics And Data Science'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Statistics And Data Science
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='Sustainable Energy Engineering'>
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Sustainable Energy Engineering
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="btn-group">
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger">Blood Group</button>
+                <button style='color:#32CD32; background-color: #000000;' type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul style='color:#32CD32; background-color: #000000;' class="dropdown-menu">
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='A+' value='A+'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      A+
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='A-' value='A-'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      A-
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='AB+' value='AB+'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      AB+
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='AB-' value='AB-'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      AB-
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='B+' value='B+'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      B+
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='B-' value='B-'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      B-
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='O+' value='O+'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      O+
+                    </label>
+                  </div></li>
+                  <li><div class="form-check">
+                    <input style='margin-left: 1%;' class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name='O-' value='O-'>
+                    <label style='margin-left: 1%;' class="form-check-label" for="flexCheckDefault">
+                      O-
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
+          <br>
+          <div class="mb-3">
+              <input style="color:#32CD32; background-color: #000000;" type="text" class="form-control" id="formGroupExampleInput" placeholder="Hometown" name='hometown'>
+          </div>
+          <br>
+          <div class="mb-3">
+              <input style="color:#32CD32; background-color: #000000;" type="text" class="form-control" id="name" placeholder="Name, Username or Roll" name='name' >
+          </div>
+          <input style='color:#FFFFFF; width:30%; padding-top: 1%; padding-bottom:1%; font-size:large; margin-left:35%; background-color:#008000;' type="submit" value="Submit">
+        </form>
+      </div>
+      <br>
+  </section>
+
+    <div style="margin-top:2%; margin-left:42%;">
+      {% if empty%}
+      <span style="width:30%; padding-top: 1%; padding-bottom:1%; font-size:large;" class="badge rounded-pill text-bg-danger">No Results Found</span>
+      {% else %}
+      <span style="width:30%; padding-top: 1%; padding-bottom:1%; font-size:large;" class="badge rounded-pill text-bg-success">{{length}} Results Found</span>
+      {% endif %}
+    </div>
+
+    <br>
+
+    <section style="width:80%; margin-left:10%;">
+        <div class="container text-center">
+            <div class="row g-2">
+
+              {% comment %} <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px; background-color:#98FB98;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Ankush</h5>
+                          <p class="card-text">Biological Sciences And Biological Engineering(BSBE)</p>
+                          <p class="card-text"><small class="text-muted">210153</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div> {% endcomment %}
+
+              {% for student in student %}''
+              <div class="col-6">
+                <div class="card mb-3" type="button" style="max-width: 540px; background-color:#4CBB17;" data-bs-toggle="modal" data-bs-target="#student{{forloop.counter}}">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{student.name}}</h5>
+                          <p class="card-text">{{student.branch}}</p>
+                          <p class="card-text"><small class="text-muted">{{student.roll_no}}</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="modal fade" id="student{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div style ='background-color:#5F8575; color:#FFFFFF; width:70%;' class="modal-content">
+                    <div class="modal-body">
+                      <img class="modal-title" id="student{{forloop.counter}}id" src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
+                      <h5>{{student.name}}</h5>
+                      <p>({{student.roll_no}})</p>
+                      <p>{{student.programme}}, {{student.branch}}</p>
+                      <p>{{student.room_no}}, {{student.hall}}</p>
+                      <p>{{student.hometown}}, {{student.state}}</p>
+                      <p>{{student.blood_group}}</p>
+                    </div>
+                    <div style='text-align=center; background-color:#5F8575' class="modal-footer">
+                      <a href="mailto:{{student.userid}}@iitk.ac.in">{{student.userid}}@iitk.ac.in</a>
+                      <a href="https://home.iitk.ac.in/~{{student.userid}}">Home Page</a>
+                      <a href={% url 'family-tree' %}>Family Tree</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+              {% endfor %}
+
+            </div>
+          </div>
+          
+        
+        
+    </section>
+</body>
+</html>
+{% endblock%}
