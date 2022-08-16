@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 import student
+import task_five
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('student.urls')),
+    path('student/', include('task_five.urls')),
 ]
