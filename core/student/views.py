@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from django.http import JsonResponse
 
 # Create your views here.
-def student_search(request):
+def student_search(request):  
     if request.method=='POST':
         name=request.POST.get('name')
         hometown=request.POST.get('hometown')
@@ -935,5 +935,17 @@ def student_search(request):
     }
     return render(request, "index.html", context)
 
-def family_tree(request):
-    return render(request,"family_tree.html")
+def family_tree(request, roll_no):
+    print(request.method)
+    print(request)
+    student=Student.objects.get(roll_no=roll_no)
+    baapu=student.student_guide
+    bhai=Student.objects.filter(student_guide=baapu).exclude(roll_no=roll_no)
+    bacha=Student.objects.filter(student_guide=student)
+    context={
+        'student': student,
+        'baapu':baapu,
+        'bhai': bhai,
+        'bacha': bacha,
+    }
+    return render(request,"family_tree.html",context)

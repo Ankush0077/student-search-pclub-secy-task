@@ -805,7 +805,7 @@ background-image: url(assets/images/binary.jpg);
                     <div style='text-align=center; background-color:#5F8575' class="modal-footer">
                       <a href="mailto:{{student.userid}}@iitk.ac.in">{{student.userid}}@iitk.ac.in</a>
                       <a href="https://home.iitk.ac.in/~{{student.userid}}">Home Page</a>
-                      <a href={% url 'family-tree' %}>Family Tree</a>
+                      <a href={% url 'family-tree' student.roll_no %}>Family Tree</a>
                     </div>
                   </div>
                 </div>
