@@ -1,7 +1,7 @@
 # student-search-pclub-secy-task
  Task Required To Be Done By Prospective Secretaries Of PClub IITK.
 
-This Repository Contains The Replica Of The Site https://search.pclub.in/ Along With Additional IITK Family Tree Functionality.
+This Repository Contains The Replica Of The Site https://search.pclub.in/ Along With Additional Implementation Of IITK Family Tree Functionality.
 
 STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH
 (CAUTION: Make sure python is installed in the system.)
