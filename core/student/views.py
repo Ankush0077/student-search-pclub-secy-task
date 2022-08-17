@@ -946,6 +946,12 @@ def family_tree(request, roll_no):
         print(baapu)
         bhai=Student.objects.filter(student_guide=baapu).exclude(roll_no=roll_no)
         baapu_present=True
+        if student.gender=='Female':
+            baapuText='Amma'
+            bhaiText='Behen'
+        else:
+            baapuText='Baapu'  
+            bhaiText='Bhai'
     except:
         baapu=None
         bhai=[]
@@ -957,5 +963,7 @@ def family_tree(request, roll_no):
         'bhai': bhai,
         'bacha': bacha,
         'baapu_present': baapu_present,
+        'baapu_text': baapuText,
+        'bhai_text': bhaiText,
     }
     return render(request,"family_tree.html",context)
