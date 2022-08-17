@@ -13,7 +13,7 @@ STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH
 5) The the server by the command 'python manage.py runserver'
 
 To Add Data To Data Base You Need To Go To Admin Panel Of The Site. You Need To Add '/admin' To Base Url.
-The Username And Password Is Both Admin.
+The Username And Password Is Both 'admin'.
 
 This Repository Also Contains A Simple CREATE,UPDATE,READ,DELETE Site Which Is Based On A Separate Model
 As Prescribed In Task 5. You Can Access That Site If You Add '/student' To Base URL.
