@@ -3,7 +3,7 @@
 
 This Repository Contains The Replica Of The Site https://search.pclub.in/ Along With Additional Implementation Of IITK Family Tree Functionality.
 
-STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH
+STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH:
 (CAUTION: Make sure python is installed in the system.)
 
 1) First clone the repository.
