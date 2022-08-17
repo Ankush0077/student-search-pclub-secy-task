@@ -6,9 +6,13 @@ This Repository Contains The Replica Of The Site https://search.pclub.in/ Along 
 
 ### Images Of The Student Search Site
 ![](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/landing_page_no_results.jpg)
+
 ![](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/srudent_search_one_result.jpg)
+
 ![](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/student_search_many_results.jpg)
+
 ![](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/student_search_information.jpg)
+
 ![](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/student_search_family_tree.jpg)
 
 
@@ -30,6 +34,7 @@ This Repository Also Contains A Simple CREATE,UPDATE,READ,DELETE Site Which Is B
 As Prescribed In Task 5. You Can Access That Site If You Add '/student' To Base URL.
 
 ![Student Landing Page](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/student_landing_page.jpg)
+
 ![Student Add Page](https://github.com/Ankush0077/student-search-pclub-secy-task/blob/main/Images/student_add_page.jpg)
 
 ### Summary
