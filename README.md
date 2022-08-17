@@ -3,14 +3,14 @@
 
 This Repository Contains The Replica Of The Site https://search.pclub.in/ Along With Additional Implementation Of IITK Family Tree Functionality.
 
-STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH
+**STEPS REQUIRED TO OPEN THE STUDENT SEARCH SITE MADE BY ANKUSH**
 (CAUTION: Make sure python is installed in the system.)
 
 1) First clone the repository.
 2) Open the repository in terminal.
-3) Activate the env environment(Most probably by command 'env/scripts/activate').
-4) Change directory to core(by command 'cd core' in windows).
-5) The the server by the command 'python manage.py runserver'
+3) Activate the env environment(Most probably by command `env/scripts/activate`).
+4) Change directory to core(by command `cd core` in windows).
+5) The the server by the command `python manage.py runserver`
 
 To Add Data To Data Base You Need To Go To Admin Panel Of The Site. You Need To Add '/admin' To Base Url.
 The Username And Password Is Both 'admin'.
