@@ -12,6 +12,7 @@ This Repository Contains The Replica Of The Site https://search.pclub.in/ Along 
 4) Change directory to core(by command `cd core` in windows).
 5) The the server by the command `python manage.py runserver`
 
+### Accessing Admin Site
 To Add Data To Data Base You Need To Go To Admin Panel Of The Site. You Need To Add '/admin' To Base Url.
 The Username And Password Is Both 'admin'.
 
