@@ -923,15 +923,20 @@ def student_search(request):
             student=Student.objects.filter(roll_no='Ankush')
     else:
         student=Student.objects.filter(roll_no='Ankush')
-    count=student.count()
-    if(count==0):
+    length=student.count()
+    if(length==0):
         empty=True
     else:
         empty=False
+    if(length==1):
+        single=True
+    else:
+        single=False
     context={
         'student': student,
         'empty': empty,
-        'length': count,
+        'single': single,
+        'length': length,
     }
     return render(request, "index.html", context)
 

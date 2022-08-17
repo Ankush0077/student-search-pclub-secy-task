@@ -744,34 +744,16 @@ background-image: url(assets/images/binary.jpg);
     <div style="margin-top:2%; margin-left:42%;">
       {% if empty%}
       <span style="width:30%; padding-top: 1%; padding-bottom:1%; font-size:large;" class="badge rounded-pill text-bg-danger">No Results Found</span>
+      {% elif single %}
+      <span style="width:30%; padding-top: 1%; padding-bottom:1%; font-size:large;" class="badge rounded-pill text-bg-success">{{length}} Result Found</span>
       {% else %}
       <span style="width:30%; padding-top: 1%; padding-bottom:1%; font-size:large;" class="badge rounded-pill text-bg-success">{{length}} Results Found</span>
       {% endif %}
     </div>
-
     <br>
-
     <section style="width:80%; margin-left:10%;">
         <div class="container text-center">
             <div class="row g-2">
-
-              {% comment %} <div class="col-6">
-                <div class="card mb-3" style="max-width: 540px; background-color:#98FB98;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="assets\images\ankush.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Ankush</h5>
-                          <p class="card-text">Biological Sciences And Biological Engineering(BSBE)</p>
-                          <p class="card-text"><small class="text-muted">210153</small></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div> {% endcomment %}
-
               {% for student in student %}
               <div class="col-6">
                 <div class="card mb-3" type="button" style="max-width: 540px; background-color:#4CBB17;" data-bs-toggle="modal" data-bs-target="#student{{forloop.counter}}">
@@ -789,7 +771,6 @@ background-image: url(assets/images/binary.jpg);
                     </div>
                   </div>
               </div>
-
               <div class="modal fade" id="student{{forloop.counter}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div style ='background-color:#5F8575; color:#FFFFFF; width:70%;' class="modal-content">
@@ -811,15 +792,9 @@ background-image: url(assets/images/binary.jpg);
                   </div>
                 </div>
               </div>
-
-              
               {% endfor %}
-
             </div>
-          </div>
-          
-        
-        
+          </div>  
     </section>
 </body>
 </html>
